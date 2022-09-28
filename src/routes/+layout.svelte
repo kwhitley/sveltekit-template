@@ -3,7 +3,8 @@
   import Footer from '~/layout/Footer.svelte'
   import '~/styles/app.scss'
 
-  let confined = true
+  // DEFINES IF THE PAGE IS WIDTH-CONSTRAINED
+  let constrained = true
 </script>
 
 <svelte:head>
@@ -15,8 +16,8 @@
   <html lang="en" />
 </svelte:head>
 
-<main class:confined>
-  <Nav confined={confined} version sticky>
+<main class:constrained>
+  <Nav version sticky>
     <!-- <span slot="brand">
       it<strike>t</strike>y.sh
       <small>and the kitties</small>
@@ -39,7 +40,7 @@
     <slot />
   </section>
 
-  <Footer confined={confined} sticky>
+  <Footer constrained={constrained} sticky>
     &copy; 2022, All rights reserved.
   </Footer>
 </main>

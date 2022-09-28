@@ -15,7 +15,7 @@
     margin-bottom: 2rem;
   }
 
-  :global(.confined .page > div) {
+  :global(.constrained .page > div) {
     max-width: var(--max-page-width);
   }
 </style>

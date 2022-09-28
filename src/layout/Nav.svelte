@@ -5,13 +5,13 @@
   import MenuIcon from './MenuIcon.svelte'
 
   export let sticky = false
-  export let confined = true
+  export let constrained = false
   export let version = false
 </script>
 
 <!-- MARKUP -->
 <header class:sticky>
-  <section class:confined>
+  <section class:constrained>
     <Brand showVersion={version}>
       <slot name="brand">
         SvelteKit Template
@@ -45,7 +45,7 @@
     align-items: center;
     column-gap: 2em;
 
-    &.confined {
+    &.constrained {
       max-width: var(--max-page-width);
     }
   }

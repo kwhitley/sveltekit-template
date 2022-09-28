@@ -1,11 +1,11 @@
 <script>
-  export let confined = false
+  export let constrained = false
   export let sticky = false
 </script>
 
 <!-- MARKUP -->
 <footer class:sticky>
-  <section class:confined>
+  <section class:constrained>
     <slot>
       Footer content goes here.
     </slot>
@@ -16,16 +16,16 @@
 <style lang="scss">
   footer {
     padding: 1.5em;
-    border-top: 1px solid var(--foreground-5);
     display: flex;
     justify-content: center;
     font-size: 0.9em;
-    color: var(--foreground-25);
+    color: var(--foreground-50);
     background: var(--background-color);
 
     &.sticky {
       position: sticky;
-      bottom: -1px;
+      bottom: 0;
+      border-top: 1px solid var(--foreground-25);
     }
   }
 
@@ -36,7 +36,7 @@
     align-items: center;
     column-gap: 2em;
 
-    &.confined {
+    &.constrained {
       max-width: var(--max-page-width);
     }
   }
