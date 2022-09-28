@@ -337,4 +337,9 @@ caption {
   font-size: 0.85em;
   line-height: 1.2em;
   color: var(--foreground-75);
+
+  a {
+    font-weight: 400;
+    color: var(--foreground-color);
+  }
 }
