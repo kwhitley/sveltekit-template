@@ -22,6 +22,8 @@
 
   // MISC SETTINGS
   --ol-counter-size: 2rem;
+  --image-border-radius: 0.3rem;
+  --image-border: 1px solid var(--foreground-50);
 
   // IGNORE STUFF BELOW THIS LINE
   --foreground-hue: var(--lightmode-foreground-hue);
@@ -228,7 +230,7 @@ h3 {
   margin-bottom: 0.8rem;
 }
 
-p, li {
+p, li, caption {
   font-family: sans-serif;
   font-weight: 100;
   font-size: 1.1rem;
@@ -243,7 +245,7 @@ p, li {
   margin-top: 2rem;
 }
 
-li {
+li, caption {
   font-size: 0.95rem;
 }
 
@@ -281,4 +283,54 @@ ol li::before {
   font-size: var(--ol-counter-size);
   margin: -0.1em 0.7rem 0 0;
   font-family: serif;
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+
+  caption {
+    padding: 0 1.5em;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  &.horizontal {
+    @media (min-width: 500px) {
+      flex-flow: row;
+      gap: 2rem;
+
+      & > * {
+        flex: 1;
+        overflow: hidden;
+      }
+
+      caption {
+        flex: 0.25;
+        text-align: left;
+        padding: 0 1em 0 0;
+      }
+    }
+  }
+}
+
+img {
+  border-radius: var(--image-border-radius);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: var(--image-border);
+}
+
+caption {
+  font-size: 0.85em;
+  line-height: 1.2em;
+  color: var(--foreground-75);
 }

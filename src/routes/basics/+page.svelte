@@ -38,6 +38,11 @@
 
   <p>Nulla nisl diam, egestas vitae sollicitudin ac, sodales quis velit. Ut quis dui ut libero molestie sodales quis vitae nisi. Phasellus ac fermentum odio, a congue turpis. Donec scelerisque et massa eu iaculis. Praesent ac est non diam consectetur iaculis. In sodales dui ut dictum molestie. Praesent non aliquet enim. Nullam eget faucibus tellus. Suspendisse potenti. Aenean nisi ipsum, rhoncus ut nunc quis, bibendum hendrerit metus. Vestibulum ac lacus a eros imperdiet sagittis. Nunc accumsan condimentum leo at posuere. Suspendisse ultricies volutpat mauris gravida maximus. Donec nunc ligula, maximus in quam id, egestas egestas nulla. Pellentesque sed tristique nisi. Praesent quis placerat mi, ut viverra dolor.</p>
 
+  <figure class="horizontal">
+    <img alt="a kitten" src="https://placekitten.com/2000/800" width="2000" height="800" />
+    <caption>A cute little kitten. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque arcu, convallis vel sollicitudin quis, egestas vel magna.</caption>
+  </figure>
+
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque arcu, convallis vel sollicitudin quis, egestas vel magna. Morbi ac nisi eu est ullamcorper fermentum. Etiam et mollis orci. Quisque varius, dolor nec vestibulum viverra, metus sapien ultrices felis, sed pharetra mauris felis sit amet arcu. Phasellus ornare nunc in lacus euismod, vel porttitor massa aliquet. Proin vitae lorem at ex commodo euismod non quis velit. Duis enim ante, scelerisque vitae porttitor at, mattis id justo. Phasellus vel urna justo. Donec accumsan aliquam lectus, quis scelerisque risus scelerisque ut. Nulla mi elit, tempor eu ex laoreet, tristique pretium dolor. Cras tempus sagittis efficitur.</p>
 
   <ol>
@@ -52,6 +57,11 @@
 
   <h1>Hello With Some Title Case Words</h1>
   <p>Nam sit amet vulputate est. Nunc gravida semper neque a imperdiet. Vivamus eleifend metus felis, quis euismod lacus suscipit vitae. Mauris sed dolor a diam vulputate tincidunt. Mauris eu leo iaculis ipsum bibendum consequat. Fusce a aliquet nisi. Nulla nec ligula pharetra, lacinia erat pellentesque, egestas ipsum. Curabitur lectus turpis, malesuada eget volutpat non, consectetur at tortor. Proin maximus nisl et ligula malesuada, et pretium purus finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam non consectetur elit.</p>
+
+  <figure>
+    <img alt="a kitten" src="https://placekitten.com/2000/1000" width="2000" height="1000" />
+    <caption>A cute little kitten.</caption>
+  </figure>
 
   <p>Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus. Vestibulum semper, dolor a posuere venenatis, nunc augue volutpat ante, eu fringilla nunc libero a nibh. Curabitur sed euismod lorem, eget convallis odio. Nulla tincidunt fringilla ligula sed elementum. Proin ex odio, tempus vitae auctor vitae, sagittis ac dolor. Nullam luctus lorem sed dui iaculis, id elementum ipsum pulvinar. Etiam id lobortis libero. Praesent tempor pulvinar arcu eget tempor. Proin scelerisque feugiat orci, faucibus laoreet neque. Maecenas auctor ipsum eget auctor porta. Suspendisse venenatis metus commodo enim vestibulum interdum.</p>
 

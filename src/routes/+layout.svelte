@@ -16,7 +16,7 @@
   <html lang="en" />
 </svelte:head>
 
-<main class:constrained>
+<main>
   <Nav version sticky>
     <span slot="brand">
       it<strike>t</strike>y.sh
@@ -31,11 +31,11 @@
     <a href="https://itty.cards.com">itty.cards</a>
   </Nav>
 
-  <section>
+  <section class:constrained>
     <slot />
   </section>
 
-  <Footer constrained={constrained} sticky>
+  <Footer constrained={constrained}>
     &copy; 2022, All rights reserved.
   </Footer>
 </main>
