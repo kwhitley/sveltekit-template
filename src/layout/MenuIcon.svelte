@@ -17,8 +17,9 @@
     --transform-time: 0.2s;
     --bar-thickness: 3px;
     --bar-gap: 0.3rem;
-    width: 2em;
-    --icon-color: #333;
+    // width: 2em;
+    width: 100%;
+    --icon-color: var(--foreground-color);
     cursor: pointer;
     transition: all var(--transform-time) ease;
     display: flex;
@@ -28,7 +29,6 @@
     &.open {
       .top, .middle {
         width: 80%;
-        // background-color: #777;
       }
 
       .top {
@@ -40,8 +40,8 @@
       }
 
       .bottom {
-        width: 1000%;
-        background-color: #ddd;
+        max-width: 100%;
+        background-color: var(--foreground-25);
         margin-top: 0.5em;
       }
     }
@@ -59,6 +59,7 @@
     margin-bottom: var(--bar-gap);
     border-radius: 1em;
     width: 100%;
+    max-width: 2em;
     transition: all var(--transform-time) ease;
   }
 </style>

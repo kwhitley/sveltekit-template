@@ -1,10 +1,46 @@
 :root {
+  --max-page-width: 800px;
   --transition-duration: 0.1s;
   --border-radius: 0.6rem;
-  --go-color: rgb(28, 164, 49);
   --accent-color: rgb(255, 0, 200);
-  --max-page-width: 800px;
+
   --link-color: var(--accent-color);
+  --brand-color: var(--accent-color);
+  --brand-size: 3.2rem;
+  --version-offset: -0.3rem;
+  --header-color: var(--background-color);
+
+  // LIGHT MODE COLORS
+  --lightmode-foreground-hue: 50, 50, 50;
+  --lightmode-background-hue: 255, 255, 255;
+
+  // DARK MODE COLORS
+  --darkmode-foreground-hue: 225, 225, 225;
+  --darkmode-background-hue: 0, 0, 0;
+
+  // IGNORE STUFF BELOW THIS LINE
+  --foreground-hue: var(--lightmode-foreground-hue);
+  --background-hue: var(--lightmode-background-hue);
+
+  --foreground-color: rgb(var(--foreground-hue));
+  --background-color: rgb(var(--background-hue));
+
+  --foreground-5: rgba(var(--foreground-hue), 0.05);
+  --foreground-25: rgba(var(--foreground-hue), 0.25);
+  --foreground-50: rgba(var(--foreground-hue), 0.50);
+  --foreground-75: rgba(var(--foreground-hue), 0.75);
+  --foreground-95: rgba(var(--foreground-hue), 0.95);
+
+  --background-5: rgba(var(--background-hue), 0.05);
+  --background-25: rgba(var(--background-hue), 0.25);
+  --background-50: rgba(var(--background-hue), 0.50);
+  --background-75: rgba(var(--background-hue), 0.75);
+  --background-95: rgba(var(--background-hue), 0.95);
+
+  @media (prefers-color-scheme: dark) {
+    --foreground-hue: var(--darkmode-foreground-hue);
+    --background-hue: var(--darkmode-background-hue);
+  }
 }
 
 * {
@@ -17,10 +53,12 @@ html {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   margin-left: calc(100vw - 100%);
+  background-color: var(--background-color);
 }
 
 body {
   height: 100%;
+  color: var(--foreground-color);
 }
 
 ul, ol {
@@ -61,10 +99,10 @@ input.text, textarea {
 
 blockquote {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background: #f7f7f7;
-  border-left: 0.5rem solid #ccc;
+  background: var(--foreground-5);
+  border-left: 0.5rem solid var(--foreground-25);
   margin: 1.5em 0 1.5em 0;
-  padding: 0.8em 1em;
+  padding: 1em 1em 0.6em;
   quotes: "\201C""\201D""\2018""\2019";
   font-size: 1.4rem;
   line-height: 1.4em;
@@ -73,6 +111,7 @@ blockquote {
 
   &:before {
     color: #ccc;
+    color: var(--foreground-25);
     content: open-quote;
     font-size: 4em;
     line-height: 0;

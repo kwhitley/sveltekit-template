@@ -13,7 +13,12 @@
 </svelte:head>
 
 <main>
-  <Nav version>
+  <Nav version sticky>
+    <!-- <span slot="brand">
+      it<strike>t</strike>y.sh
+      <small>and the kitties</small>
+    </span> -->
+
     <span slot="brand">
       it<strike>t</strike>y.sh
     </span>
@@ -43,5 +48,13 @@
       display: flex;
       justify-content: center;
     }
+  }
+
+  small {
+    font-size: 0.5em;
+    letter-spacing: 0em;
+    color: var(--foreground-25);
+    top: -0.4rem;
+    position: relative;
   }
 </style>

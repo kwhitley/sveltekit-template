@@ -2,7 +2,7 @@
   import Brand from './Brand.svelte'
   import Menu from './Menu.svelte'
 
-  export let sticky = true
+  export let sticky = false
   export let confined = true
   export let version = false
 </script>
@@ -25,12 +25,12 @@
 <!-- STYLES -->
 <style lang="scss">
   header {
-    padding: 0.5em 1em;
-    background-color: #fff;
+    padding: 0.5em 1em 0.5em;
+    background-color: var(--header-color);
     z-index: 1;
     display: flex;
     justify-content: center;
-
+    backdrop-filter: blur(0.2em);
   }
 
   section {
@@ -47,7 +47,7 @@
   }
 
   .sticky {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--foreground-50);
     box-shadow: 0 0 1em rgba(0,0,0,0.2);
     top: 0;
     position: sticky;
