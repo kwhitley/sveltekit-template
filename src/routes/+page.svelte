@@ -1,13 +1,13 @@
 <script>
   import { LOGGING } from '~/constants'
-  import Page from '~/components/Page.svelte'
+  import Page from '~/layout/Page.svelte'
 
   LOGGING && console.log('loading app...')
 </script>
 
 <!-- MARKUP -->
 <Page>
-  <h1>Hello with a <span class="text-gradient from-purple to-pink">really long</span> title that runs on <span class="red">and on</span></h1>
+  <h1>Hello with a <span class="text-gradient from-purple to-pink">really long</span> title that runs on <span class="colored green">and on</span></h1>
 
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque arcu, convallis vel sollicitudin quis, egestas vel magna. Morbi ac nisi eu est ullamcorper fermentum. Etiam et mollis orci. Quisque varius, dolor nec vestibulum viverra, metus sapien ultrices felis, sed pharetra mauris felis sit amet arcu. Phasellus ornare nunc in lacus euismod, vel porttitor massa aliquet. Proin vitae lorem at ex commodo euismod non quis velit. Duis enim ante, scelerisque vitae porttitor at, mattis id justo. Phasellus vel urna justo. Donec accumsan aliquam lectus, quis scelerisque risus scelerisque ut. Nulla mi elit, tempor eu ex laoreet, tristique pretium dolor. Cras tempus sagittis efficitur.</p>
 
@@ -60,5 +60,7 @@
 
 <!-- STYLES -->
 <style lang="scss">
-
+  .colored {
+    --text-opacity: 0.3;
+  }
 </style>

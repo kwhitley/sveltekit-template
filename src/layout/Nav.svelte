@@ -1,6 +1,8 @@
 <script>
+  import { headerIsOpen } from '~/stores'
   import Brand from './Brand.svelte'
   import Menu from './Menu.svelte'
+  import MenuIcon from './MenuIcon.svelte'
 
   export let sticky = false
   export let confined = true
@@ -15,6 +17,8 @@
         SvelteKit Template
       </slot>
     </Brand>
+
+    <MenuIcon bind:open={$headerIsOpen} />
 
     <Menu>
       <slot />
@@ -39,7 +43,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
+    column-gap: 2em;
 
     &.confined {
       max-width: var(--max-page-width);

@@ -1,6 +1,9 @@
 <script>
   import Nav from '~/layout/Nav.svelte'
-  import '../app.scss'
+  import Footer from '~/layout/Footer.svelte'
+  import '~/styles/app.scss'
+
+  let confined = true
 </script>
 
 <svelte:head>
@@ -12,8 +15,8 @@
   <html lang="en" />
 </svelte:head>
 
-<main>
-  <Nav version sticky>
+<main class:confined>
+  <Nav confined={confined} version sticky>
     <!-- <span slot="brand">
       it<strike>t</strike>y.sh
       <small>and the kitties</small>
@@ -35,13 +38,16 @@
   <section>
     <slot />
   </section>
+
+  <Footer confined={confined} sticky>
+    &copy; 2022, All rights reserved.
+  </Footer>
 </main>
 
 <style lang="scss">
   main {
     display: flex;
     flex-flow: column;
-    // height: 100%;
 
     section {
       flex: 1;

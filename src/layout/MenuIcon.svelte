@@ -18,13 +18,15 @@
     --bar-thickness: 3px;
     --bar-gap: 0.3rem;
     // width: 2em;
-    width: 100%;
+    flex: 1;
+    // width: 100%;
     --icon-color: var(--foreground-color);
     cursor: pointer;
     transition: all var(--transform-time) ease;
     display: flex;
     flex-flow: column;
     align-items: flex-end;
+    position: relative;
 
     &.open {
       .top, .middle {
@@ -51,6 +53,12 @@
       --icon-color: var(--accent-color);
       // transform: scale(1.1);
     }
+
+    @media (max-width: 800px) {
+      // position: absolute;
+      // // top: -0.5em;
+      // color: red;
+    }
   }
 
   div {
@@ -61,5 +69,9 @@
     width: 100%;
     max-width: 2em;
     transition: all var(--transform-time) ease;
+  }
+
+  .bottom {
+    margin-bottom: 0;
   }
 </style>

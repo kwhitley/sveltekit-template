@@ -9,8 +9,6 @@
 
 
 <section>
-  <MenuIcon bind:open={$headerIsOpen} />
-
   {#if true || $headerIsOpen}
     <nav transition:slide={{ duration: 200 }} class:open={$headerIsOpen}>
       <slot />
@@ -21,12 +19,13 @@
 <!-- STYLES -->
 <style lang="scss">
   section {
-    flex: 1 10em;
+    flex: 1 100%;
     display: flex;
     flex-flow: column;
     align-items: flex-end;
-    padding: 1.2rem 0;
-    overflow: hidden;
+    // padding: 1.2rem 0;
+    // position: relative;
+    // overflow: hidden;
   }
 
   nav {
