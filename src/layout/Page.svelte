@@ -1,5 +1,11 @@
+<script>
+  import { fade, fly } from 'svelte/transition'
+</script>
+
 <main class="page">
-  <div>
+  <div
+    in:fly={{ x: 100, duration: 300 }}
+  >
     <slot />
   </div>
 </main>

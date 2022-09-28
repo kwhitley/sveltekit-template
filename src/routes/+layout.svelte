@@ -18,17 +18,12 @@
 
 <main class:constrained>
   <Nav version sticky>
-    <!-- <span slot="brand">
-      it<strike>t</strike>y.sh
-      <small>and the kitties</small>
-    </span> -->
-
     <span slot="brand">
       it<strike>t</strike>y.sh
     </span>
 
-    <a href="https://itty.cards.com">itty.cards</a>
-    <a href="https://itty.sh">itty.sh</a>
+    <a href="/basics">Basics</a>
+    <a href="/forms">Forms Elements</a>
     <a href="https://aimandkevinbutaimeesnamefirst.com">Another Site</a>
     <a href="https://itty.cards.com">itty.cards</a>
     <a href="https://itty.sh">itty.sh</a>

@@ -261,6 +261,11 @@ ol {
   gap: 1em;
   margin: 0;
   padding: 0;
+  margin-left: 1em;
+}
+
+ul {
+  margin-left: 2.7em;
 }
 
 ol li {
@@ -276,5 +281,4 @@ ol li::before {
   font-size: var(--ol-counter-size);
   margin: -0.1em 0.7rem 0 0;
   font-family: serif;
-  line-height: 1;
 }

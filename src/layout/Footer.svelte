@@ -23,8 +23,9 @@
     background: var(--background-color);
 
     &.sticky {
-      position: sticky;
+      position: fixed;
       bottom: 0;
+      width: 100%;
       border-top: 1px solid var(--foreground-25);
     }
   }
