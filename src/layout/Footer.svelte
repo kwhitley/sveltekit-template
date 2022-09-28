@@ -18,8 +18,8 @@
     padding: 1.5em;
     display: flex;
     justify-content: center;
-    font-size: 0.9em;
-    color: var(--foreground-50);
+    font-size: 0.85em;
+    color: var(--foreground-75);
     background: var(--background-color);
 
     &.sticky {
