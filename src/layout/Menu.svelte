@@ -4,13 +4,13 @@
   import MenuIcon from './MenuIcon.svelte'
   import { headerIsOpen } from '~/stores'
 
-  export let collapsible = true
+  export let horizontal = true
 </script>
 
 
 <section>
   {#if true || $headerIsOpen}
-    <nav transition:slide={{ duration: 200 }} class:open={$headerIsOpen}>
+    <nav transition:slide={{ duration: 200 }} class:open={$headerIsOpen} class:horizontal>
       <slot />
     </nav>
   {/if}
@@ -30,18 +30,22 @@
 
   nav {
     display: flex;
-    flex-flow: row wrap;
     font-size: 1.1rem;
     column-gap: 1.5em;
     row-gap: 0.6em;
-    padding: 0.5em 0;
     align-items: center;
     justify-content: flex-end;
     flex-flow: column;
     align-items: flex-end;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     max-height: 400px;
     overflow: hidden;
+
+    &.horizontal {
+      flex-flow: row wrap;
+      row-gap: 0.8em;
+      max-height: 70px;
+    }
     // outline: 2px solid red;
 
     &:not(.open) {
@@ -52,9 +56,9 @@
 
   :global(header nav a) {
     color: var(--foreground-color);
+    text-decoration: none !important;
 
     &:hover:not(.active) {
-      text-decoration: none;
       opacity: 0.7;
     }
   }
@@ -63,6 +67,7 @@
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
     margin-bottom: -2px;
+    text-decoration: none;
 
     cursor: default;
     pointer-events: none;

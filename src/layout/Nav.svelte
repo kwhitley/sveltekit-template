@@ -7,6 +7,8 @@
   export let sticky = false
   export let constrained = false
   export let version = false
+  export let collapsable = true
+  export let horizontal = false
 </script>
 
 <!-- MARKUP -->
@@ -18,18 +20,22 @@
       </slot>
     </Brand>
 
-    <MenuIcon bind:open={$headerIsOpen} />
+    <div class="menu">
+      {#if collapsable}
+        <MenuIcon bind:open={$headerIsOpen} />
+      {/if}
 
-    <Menu>
-      <slot />
-    </Menu>
+      <Menu horizontal={horizontal}>
+        <slot />
+      </Menu>
+    </div>
   </section>
 </header>
 
 <!-- STYLES -->
 <style lang="scss">
   header {
-    padding: 0.5em 1em 0.5em;
+    padding: 0.5em 1em 0.7em;
     background-color: var(--header-color);
     z-index: 1;
     display: flex;
@@ -40,7 +46,7 @@
   section {
     flex: 1;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: space-between;
     align-items: center;
     column-gap: 2em;
@@ -48,6 +54,11 @@
     &.constrained {
       max-width: var(--max-page-width);
     }
+  }
+
+  div.menu {
+    flex: 1;
+    padding: 0.8em 0;
   }
 
   .sticky {

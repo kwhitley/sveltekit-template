@@ -27,6 +27,7 @@
     flex-flow: column;
     align-items: flex-end;
     position: relative;
+    padding: 1em 0;
 
     &.open {
       .top, .middle {

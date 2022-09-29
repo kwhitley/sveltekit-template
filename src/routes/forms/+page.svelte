@@ -7,7 +7,7 @@
 
 <!-- MARKUP -->
 <Page>
-  <h1>Form Elements</h1>
+  <h1>Page 1</h1>
 
   <p>Let's get started on some forms!</p>
 </Page>

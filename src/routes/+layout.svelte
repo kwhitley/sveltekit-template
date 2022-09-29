@@ -19,7 +19,7 @@
 </svelte:head>
 
 <main>
-  <Nav version sticky>
+  <Nav version sticky horizontal>
     <span slot="brand">
       it<strike>t</strike>y.sh
     </span>
@@ -55,6 +55,7 @@
     section {
       flex: 1;
       display: flex;
+      flex-flow: row wrap;
       justify-content: center;
     }
   }
