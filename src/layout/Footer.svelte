@@ -1,11 +1,12 @@
 <script>
   export let constrained = false
   export let sticky = false
+  export let centered = false
 </script>
 
 <!-- MARKUP -->
 <footer class:sticky>
-  <section class:constrained>
+  <section class:constrained class:centered>
     <slot>
       Footer content goes here.
     </slot>
@@ -21,6 +22,7 @@
     font-size: 0.85em;
     color: var(--foreground-75);
     background: var(--footer-color);
+    border-top: 1px solid var(--foreground-10);
 
     &.sticky {
       position: fixed;
@@ -39,6 +41,11 @@
 
     &.constrained {
       max-width: var(--max-page-width);
+    }
+
+    &.centered {
+      text-align: center;
+      display: block;
     }
   }
 </style>

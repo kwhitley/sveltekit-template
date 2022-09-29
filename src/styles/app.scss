@@ -15,6 +15,7 @@
   --footer-color: var(--background-color);
   --page-gutter: 2rem;
   --navlink-border: 3px;
+  --card-gutter: 1.5rem;
 
   // LIGHT MODE COLORS
   --lightmode-foreground-hue: 50, 50, 50;
@@ -37,12 +38,14 @@
   --background-color: rgb(var(--background-hue));
 
   --foreground-5: rgba(var(--foreground-hue), 0.05);
+  --foreground-10: rgba(var(--foreground-hue), 0.10);
   --foreground-25: rgba(var(--foreground-hue), 0.25);
   --foreground-50: rgba(var(--foreground-hue), 0.50);
   --foreground-75: rgba(var(--foreground-hue), 0.75);
   --foreground-95: rgba(var(--foreground-hue), 0.95);
 
   --background-5: rgba(var(--background-hue), 0.05);
+  --background-10: rgba(var(--background-hue), 0.1);
   --background-25: rgba(var(--background-hue), 0.25);
   --background-50: rgba(var(--background-hue), 0.50);
   --background-75: rgba(var(--background-hue), 0.75);
@@ -241,7 +244,7 @@ h3 {
 p, li, caption {
   font-family: sans-serif;
   font-weight: 100;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   line-height: 1.5em;
 
   &:not(:last-child) {
@@ -254,7 +257,7 @@ p, li, caption {
 }
 
 li, caption {
-  font-size: 0.95rem;
+  font-size: 0.95em;
 }
 
 ul, ol {
@@ -339,7 +342,7 @@ img {
 
 caption {
   font-size: 0.85em;
-  line-height: 1.2em;
+  line-height: 1.3em;
   color: var(--foreground-75);
 
   a {
