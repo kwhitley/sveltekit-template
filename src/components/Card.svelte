@@ -1,5 +1,9 @@
+<script>
+  export let active = false
+</script>
+
 <!-- MARKUP -->
-<div class="card">
+<div class="card" class:active>
   <slot />
 </div>
 
@@ -7,6 +11,7 @@
 <style lang="scss">
   :root {
     --card-font-size: 0.85rem;
+    --active-color: var(--card-active-color);
   }
 
   .card {
@@ -17,6 +22,11 @@
     display: flex;
     flex-flow: column;
     position: relative;
+  }
+
+  .active {
+    outline: 3px solid var(--active-color);
+    outline-offset: -2px;
   }
 
   :global(.card > *) {

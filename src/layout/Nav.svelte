@@ -7,7 +7,7 @@
   export let sticky = false
   export let constrained = false
   export let version = false
-  export let collapsible = true
+  export let collapsible = false
   export let horizontal = false
 </script>
 

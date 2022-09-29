@@ -1,6 +1,8 @@
 :root {
   --text-opacity: 1;
+  --overlay-opacity: 0.1;
   --text-hue: 255, 0, 200;
+  --overlay-hue: var(--background-color);
 
   --black-hue: 0, 0, 0;
   --blue-hue: 48, 115, 221;
@@ -28,6 +30,7 @@
   --yellow: rgb(var(--yellow-hue));
 
   --text-color: rgba(var(--text-hue), var(--text-opacity));
+  --overlay-color: rgba(var(--overlay-hue), var(--overlay-opacity));
 }
 
 .text-gradient {

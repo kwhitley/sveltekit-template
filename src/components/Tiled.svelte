@@ -11,7 +11,7 @@
 <!-- STYLES -->
 <style lang="scss">
   :root {
-    --gap: 1em;
+    --gap: var(--tile-gutter);
   }
 
   .tiled {

@@ -18,7 +18,7 @@
 </svelte:head>
 
 <main>
-  <Nav version horizontal sticky>
+  <Nav version sticky collapsible>
     <span slot="brand">
       it<strike>t</strike>y.sh
     </span>
