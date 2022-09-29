@@ -1,4 +1,5 @@
 @import './colors.scss';
+@import './extras.scss';
 
 :root {
   --max-page-width: 800px;
@@ -11,6 +12,8 @@
   --brand-size: 3.2rem;
   --version-offset: -0.3rem;
   --header-color: var(--background-color);
+  --footer-color: var(--background-color);
+  --page-gutter: 2rem;
 
   // LIGHT MODE COLORS
   --lightmode-foreground-hue: 50, 50, 50;
@@ -169,8 +172,8 @@ textarea {
 hr {
   border: 0;
   height: 2px;
-  border-bottom: 2px dashed #ddd;
-  margin: 1em 0;
+  border-bottom: 2px dashed var(--foreground-25);
+  margin: 3rem 0 3rem;
 }
 
 button {
@@ -238,7 +241,7 @@ p, li, caption {
   font-family: sans-serif;
   font-weight: 100;
   font-size: 1.1rem;
-  line-height: 1.4em;
+  line-height: 1.5em;
 
   &:not(:last-child) {
     margin-bottom: 1.5em;
@@ -341,5 +344,12 @@ caption {
   a {
     font-weight: 400;
     color: var(--foreground-color);
+  }
+}
+
+// RESPONSIVE BITS
+:root {
+  @media (max-width: 500px) {
+    --page-gutter: 1em;
   }
 }

@@ -15,12 +15,12 @@
 <!-- STYLES -->
 <style lang="scss">
   footer {
-    padding: 1.5em;
+    padding: 2.5rem var(--page-gutter) 4rem;
     display: flex;
     justify-content: center;
     font-size: 0.85em;
     color: var(--foreground-75);
-    background: var(--background-color);
+    background: var(--footer-color);
 
     &.sticky {
       position: fixed;

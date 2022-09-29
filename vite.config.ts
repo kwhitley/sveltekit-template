@@ -6,6 +6,12 @@ console.log('process.env', process.env.LOGGING)
 
 export default {
   plugins: [sveltekit()],
+  // optimizeDeps: {
+	// 	exclude: ['svelte-navlink-action'],
+	// },
+	// ssr: {
+	// 	noExternal: ['svelte-navlink-action'],
+	// },
   server: {
     port: 3000,
   },

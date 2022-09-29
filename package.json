@@ -31,5 +31,6 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte-navlink-action": "^0.1.4"
 	}
 }

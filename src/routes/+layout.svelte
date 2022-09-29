@@ -2,6 +2,8 @@
   import Nav from '~/layout/Nav.svelte'
   import Footer from '~/layout/Footer.svelte'
   import '~/styles/app.scss'
+  import a from '~/components/Link.svelte'
+  import { navlink } from 'svelte-navlink-action'
 
   // DEFINES IF THE PAGE IS WIDTH-CONSTRAINED
   let constrained = true
@@ -22,8 +24,11 @@
       it<strike>t</strike>y.sh
     </span>
 
-    <a href="/basics">Basics</a>
-    <a href="/forms">Forms Elements</a>
+    <a href="/basics" use:navlink>Basics</a>
+    <a href="/forms" use:navlink>Forms Elements</a>
+    <a href="/misc" use:navlink>Misc</a>
+    <a href="/" use:navlink>Home (default)</a>
+    <a href="/" use:navlink={{ exact: true }}>Home (exact)</a>
     <a href="https://aimandkevinbutaimeesnamefirst.com">Another Site</a>
     <a href="https://itty.cards.com">itty.cards</a>
     <a href="https://itty.sh">itty.sh</a>
@@ -44,6 +49,8 @@
   main {
     display: flex;
     flex-flow: column;
+    height: 100%;
+    overflow: scroll;
 
     section {
       flex: 1;

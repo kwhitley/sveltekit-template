@@ -12,6 +12,9 @@ module.exports = {
 		sourceType: 'module',
 		ecmaVersion: 2020
 	},
+  rules: {
+    '@typescript-eslint/no-empty': 'off',
+  },
 	env: {
 		browser: true,
 		es2017: true,

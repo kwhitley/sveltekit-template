@@ -14,7 +14,7 @@
 <style lang="scss">
   main {
     flex: 1 100%;
-    padding: 3rem 2rem;
+    padding: 3rem var(--page-gutter);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -23,5 +23,6 @@
 
   :global(.constrained .page > div) {
     max-width: var(--max-page-width);
+    width: 100%;
   }
 </style>
