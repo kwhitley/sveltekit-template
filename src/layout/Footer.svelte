@@ -16,7 +16,7 @@
 <!-- STYLES -->
 <style lang="scss">
   footer {
-    padding: 2.5rem var(--page-gutter) 4rem;
+    padding: 2.5rem var(--page-gutter) 2.5rem;
     display: flex;
     justify-content: center;
     font-size: 0.85em;

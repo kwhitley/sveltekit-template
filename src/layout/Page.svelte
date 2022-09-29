@@ -3,9 +3,7 @@
 </script>
 
 <main class="page">
-  <div
-    in:fly={{ x: 100, duration: 300 }}
-  >
+  <div in:fly={{ x: 100, duration: 200, delay: 110 }} out:fly={{ x: -100, duration: 100 }}>
     <slot />
   </div>
 </main>
