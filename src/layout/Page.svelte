@@ -15,7 +15,7 @@
   main {
     width: 100%;
     flex: 1 100%;
-    padding: 3rem var(--page-gutter);
+    padding: 4rem var(--page-gutter) 2rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

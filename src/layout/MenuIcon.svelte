@@ -16,7 +16,7 @@
   section {
     --transform-time: 0.2s;
     --bar-thickness: 3px;
-    --bar-gap: 0.3rem;
+    --bar-gap: 5px;
     // width: 2em;
     flex: 1;
     // width: 100%;
@@ -27,7 +27,7 @@
     flex-flow: column;
     align-items: flex-end;
     position: relative;
-    padding: 1em 0;
+    padding: 1rem 0;
 
     &.open {
       .top, .middle {

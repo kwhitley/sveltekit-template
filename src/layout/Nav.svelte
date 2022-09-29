@@ -7,7 +7,7 @@
   export let sticky = false
   export let constrained = false
   export let version = false
-  export let collapsable = true
+  export let collapsible = true
   export let horizontal = false
 </script>
 
@@ -20,8 +20,8 @@
       </slot>
     </Brand>
 
-    <div class="menu">
-      {#if collapsable}
+    <div class="menu" class:open={$headerIsOpen}>
+      {#if collapsible}
         <MenuIcon bind:open={$headerIsOpen} />
       {/if}
 
@@ -46,7 +46,7 @@
   section {
     flex: 1;
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     column-gap: 2em;
@@ -59,6 +59,13 @@
   div.menu {
     flex: 1;
     padding: 0.8em 0;
+
+    &.open {
+      @media (max-width: 400px) {
+        flex: 1 100%;
+        padding-top: 0;
+      }
+    }
   }
 
   .sticky {

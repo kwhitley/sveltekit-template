@@ -9,8 +9,8 @@
 
 
 <section>
-  {#if true || $headerIsOpen}
-    <nav transition:slide={{ duration: 200 }} class:open={$headerIsOpen} class:horizontal>
+  {#if $headerIsOpen}
+    <nav transition:slide={{ duration: 200 }} class:horizontal>
       <slot />
     </nav>
   {/if}
@@ -23,34 +23,22 @@
     display: flex;
     flex-flow: column;
     align-items: flex-end;
-    // padding: 1.2rem 0;
-    // position: relative;
-    // overflow: hidden;
   }
 
   nav {
     display: flex;
     font-size: 1.1rem;
-    column-gap: 1.5em;
+    column-gap: 1.2em;
     row-gap: 0.6em;
     align-items: center;
     justify-content: flex-end;
     flex-flow: column;
     align-items: flex-end;
     transition: all 0.2s ease-in-out;
-    max-height: 400px;
-    overflow: hidden;
 
     &.horizontal {
       flex-flow: row wrap;
       row-gap: 0.8em;
-      max-height: 70px;
-    }
-    // outline: 2px solid red;
-
-    &:not(.open) {
-      max-height: 0;
-      padding: 0;
     }
   }
 
@@ -65,8 +53,8 @@
 
   :global(header nav a.active) {
     color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
-    margin-bottom: -2px;
+    border-bottom: var(--navlink-border) solid var(--accent-color);
+    margin-bottom: calc(-1 * var(--navlink-border));
     text-decoration: none;
 
     cursor: default;

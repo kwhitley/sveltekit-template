@@ -1,9 +1,8 @@
 <script>
-  import Nav from '~/layout/Nav.svelte'
-  import Footer from '~/layout/Footer.svelte'
-  import '~/styles/app.scss'
-  import a from '~/components/Link.svelte'
   import { navlink } from 'svelte-navlink-action'
+  import Footer from '~/layout/Footer.svelte'
+  import Nav from '~/layout/Nav.svelte'
+  import '~/styles/app.scss'
 
   // DEFINES IF THE PAGE IS WIDTH-CONSTRAINED
   let constrained = true
@@ -19,7 +18,7 @@
 </svelte:head>
 
 <main>
-  <Nav version sticky horizontal>
+  <Nav version horizontal sticky>
     <span slot="brand">
       it<strike>t</strike>y.sh
     </span>
