@@ -8,7 +8,7 @@
   --button-foreground-primary: var(--white);
   --button-background-secondary: var(--background-color);
   --button-foreground-secondary: var(--foreground-color);
-  --button-border-radius: 2em;//var(--border-radius);
+  --button-border-radius: var(--border-radius);
 }
 
 input, textarea, button {
