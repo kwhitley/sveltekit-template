@@ -1,11 +1,19 @@
 <script>
+  import { onMount } from 'svelte'
   export let open = false
 
   const toggle = () => open = !open
+  let loaded = false
+
+  onMount(() => {
+    setTimeout(() => {
+      loaded = true
+    }, 0)
+  })
 </script>
 
 <!-- MARKUP -->
-<section class:open on:click={toggle}>
+<section class:open class:loaded on:click={toggle}>
   <div class="top"></div>
   <div class="middle"></div>
   <div class="bottom"></div>
@@ -14,12 +22,10 @@
 <!-- STYLES -->
 <style lang="scss">
   section {
-    --transform-time: 0.2s;
+    --transform-time: 0;
     --bar-thickness: 3px;
     --bar-gap: 5px;
-    // width: 2em;
     flex: 1;
-    // width: 100%;
     --icon-color: var(--foreground-color);
     cursor: pointer;
     transition: all var(--transform-time) ease;
@@ -28,6 +34,10 @@
     align-items: flex-end;
     position: relative;
     padding: 1rem 0;
+
+    &.loaded {
+      --transform-time: 0.2s;
+    }
 
     &.open {
       .top, .middle {
@@ -50,15 +60,7 @@
     }
 
     &:hover {
-      // opacity: 0.4;
       --icon-color: var(--accent-color);
-      // transform: scale(1.1);
-    }
-
-    @media (max-width: 800px) {
-      // position: absolute;
-      // // top: -0.5em;
-      // color: red;
     }
   }
 

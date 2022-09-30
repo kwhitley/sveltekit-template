@@ -3,13 +3,17 @@
   export let value
   export let label
   export let placeholder = 'search'
+  export let clearOnSubmit = false
 
   const dispatch = createEventDispatcher()
 
   const submitHandler = e => {
     e.preventDefault()
     dispatch('submit', value)
-    value = ''
+
+    if (clearOnSubmit) {
+      value = ''
+    }
   }
 </script>
 
@@ -28,7 +32,7 @@
 <!-- STYLES -->
 <style lang="scss">
   :root {
-    --search-button-inset: 0.4rem;
+    --search-button-inset: 0.5rem;
     --search-button-padding: 0.9em;
   }
 
@@ -37,8 +41,8 @@
     position: relative;
 
     input {
-      font-size: 2rem;
-      padding-left: 0.4em;
+      font-size: 1.6rem;
+      padding: 0.4em 0.6em;
       font-weight: 100;
     }
 

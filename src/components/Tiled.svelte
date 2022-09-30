@@ -19,6 +19,7 @@
 
   .tiled {
     display: flex;
+    flex-flow: row wrap;
     gap: var(--gap);
 
     &.split {

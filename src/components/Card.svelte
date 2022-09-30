@@ -1,6 +1,9 @@
 <script>
   export let active = false
   export let href
+  export let minWidth
+
+  $: style = minWidth ? `min-width: ${minWidth};` : undefined
 </script>
 
 <!-- MARKUP -->
@@ -8,6 +11,7 @@
   this={href ? 'a' : 'div'}
   class="card"
   class:active
+  {style}
   {href}
   >
   <slot />

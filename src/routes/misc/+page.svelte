@@ -7,7 +7,7 @@
 
 <!-- MARKUP -->
 <Page>
-  <h1>Misc</h1>
+  <h2>Misc</h2>
 
   <p>Here's a rating: <Rating inline value={3.4} /></p>
 

@@ -7,7 +7,7 @@
   --max-page-width: 800px;
   --transition-duration: 0.1s;
   --border-radius: 0.6rem;
-  --border-thickness: 1px;
+  --border-thickness: 2px;
   --accent-color: rgb(255, 0, 200);
 
   --link-color: var(--blue);
@@ -210,20 +210,20 @@ button.button {
 h1, h2, h3 {
   font-size: clamp(4rem, 25vmin, 7rem);
   font-weight: lighter;
-  line-height: 0.6em;
-  letter-spacing: -0.06em;
+
   text-shadow: 0 0 1px var(--background-color);
-  // overflow: hidden;
-  // text-overflow: ellipsis;
-  // width: 80%;
-  // background-color: pink;
+  line-height: 1em;
+  letter-spacing: -0.02em;
   padding-top: 0.09em;
   padding-bottom: 0.26em;
-
   margin-bottom: 0.3rem;
-  // margin-bottom: 0.15em;
 }
 
+h1 {
+  line-height: 0.6em;
+  letter-spacing: -0.06em;
+  font-weight: 400;
+}
 
 h1.code {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -233,15 +233,19 @@ h1.code {
   text-transform: none;
 }
 
+h2, h3 {
+  font-family: sans-serif, Arial;
+}
+
 h2 {
   font-size: 2.5rem;
-  line-height: 0.8em;
-  // margin-bottom: 0.7em;
+  font-weight: 100;
 }
 
 h3 {
   font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
 p, li, caption {

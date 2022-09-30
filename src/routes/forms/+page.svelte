@@ -8,15 +8,16 @@
     console.log('searchHandler called with value', e.detail)
   }
 
+  let search = ''
   let b = 3
 </script>
 
 <!-- MARKUP -->
 <Page>
-  <h1>Forms</h1>
+  <h2>Forms</h2>
 
   <Tiled>
-    <Card>
+    <Card minWidth="25em">
       <h3>Card 1</h3>
 
       <p>Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus.</p>
@@ -61,10 +62,12 @@
       </label>
     </Card>
 
-    <Card>
+    <Card minWidth="20em">
       <h3>Card 2</h3>
 
-      <SearchInput on:submit={searchHandler} />
+      <SearchInput bind:value={search} on:submit={searchHandler} />
+
+      <p>searching for: <strong>{search}</strong></p>
 
       <p>Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus. Vestibulum semper, dolor a posuere venenatis, nunc augue volutpat ante, eu fringilla nunc libero a nibh.</p>
 

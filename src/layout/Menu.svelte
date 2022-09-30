@@ -4,6 +4,8 @@
   import MenuIcon from './MenuIcon.svelte'
   import { headerIsOpen } from '~/stores'
 
+  $: console.log('header open', $headerIsOpen)
+
   export let horizontal = true
 </script>
 
