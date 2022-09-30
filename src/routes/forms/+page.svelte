@@ -84,6 +84,23 @@
         </div>
       </label>
 
+      <label>
+        Buttons
+        <Tiled gap="0.2rem">
+          <button>Primary</button>
+          <button class="secondary">Secondary</button>
+        </Tiled>
+      </label>
+
+
+      <label>
+        Buttons (disabled)
+        <Tiled gap="0.2rem">
+          <button disabled>Primary</button>
+          <button disabled class="secondary">Secondary</button>
+        </Tiled>
+      </label>
+
       <!-- <label class="inline">
         Radio
         <input type="radio" name="foo" value="bar" />
@@ -99,5 +116,9 @@
     flex: 0;
     padding-top: var(--card-gutter);
     border-top: 1px solid var(--foreground-10);
+  }
+
+  :global(.tiled) {
+    margin-bottom: 0.2rem;
   }
 </style>

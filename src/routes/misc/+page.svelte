@@ -35,10 +35,10 @@
         />
     </Card>
 
-    <Card>
+    <Card href="/forms">
       <Tiled vertical split>
         <div>
-          <h3>Card 3</h3>
+          <h3>Card 3 (with href)</h3>
 
           <p>Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus.</p>
 

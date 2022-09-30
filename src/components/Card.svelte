@@ -1,11 +1,17 @@
 <script>
   export let active = false
+  export let href
 </script>
 
 <!-- MARKUP -->
-<div class="card" class:active>
+<svelte:element
+  this={href ? 'a' : 'div'}
+  class="card"
+  class:active
+  {href}
+  >
   <slot />
-</div>
+</svelte:element>
 
 <!-- STYLES -->
 <style lang="scss">
@@ -24,14 +30,27 @@
     position: relative;
   }
 
+  :global(a.card) {
+    cursor: pointer;
+    color: var(--foreground-color);
+    transition: all 0.05s ease;
+
+    &:hover {
+      text-decoration: none;
+      outline: 3px solid var(--link-color);
+      outline-offset: -2px;
+      box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.2);
+    }
+  }
+
   .active {
     outline: 3px solid var(--active-color);
     outline-offset: -2px;
   }
 
   :global(.card > *) {
-    padding-left: var(--card-gutter);
-    padding-right: var(--card-gutter);
+    margin-left: var(--card-gutter);
+    margin-right: var(--card-gutter);
   }
 
   :global(.card .fullwidth) {
@@ -46,7 +65,7 @@
     margin-right: calc(-1 * var(--card-gutter));
   }
 
-  :global(.card .fullwidth.padded) {
+  :global(.card .tiled * .fullwidth.padded) {
     padding-left: var(--card-gutter);
     padding-right: var(--card-gutter);
   }
