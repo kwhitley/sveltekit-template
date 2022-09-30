@@ -5,7 +5,11 @@
 </script>
 
 <!-- MARKUP -->
-<span class="rating text-gradient" class:inline style={`background-size: ${value/max*100}%;`}>
+<span
+  class="rating text-gradient"
+  class:inline
+  style={`background-size: ${value/max*100}%;`}
+  >
   {#each Array(max).fill('★') as item}
     {item}
   {/each}

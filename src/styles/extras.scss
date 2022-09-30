@@ -6,7 +6,8 @@
   // CARDS
   --card-gutter: 1.5rem;
   --card-active-color: var(--blue);
+  --card-border-thickness: var(--border-thickness);
 
   // TILES
-  --tile-gutter: 1.5rem;
+  --tile-gap: var(--default-gap);
 }

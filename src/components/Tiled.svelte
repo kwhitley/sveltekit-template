@@ -1,17 +1,20 @@
 <script>
   export let split = false
   export let vertical = false
+  export let gap
+
+  $: style = gap ? `--gap: ${gap}` : undefined
 </script>
 
 <!-- MARKUP -->
-<section class="tiled" class:vertical class:split>
+<section class="tiled" class:vertical class:split {style}>
   <slot />
 </section>
 
 <!-- STYLES -->
 <style lang="scss">
   :root {
-    --gap: var(--tile-gutter);
+    --gap: var(--tile-gap);
   }
 
   .tiled {

@@ -1,10 +1,13 @@
 @import './colors.scss';
+@import './forms.scss';
+@import './utility.scss';
 @import './extras.scss';
 
 :root {
   --max-page-width: 800px;
   --transition-duration: 0.1s;
   --border-radius: 0.6rem;
+  --border-thickness: 2px;
   --accent-color: rgb(255, 0, 200);
 
   --link-color: var(--blue);
@@ -15,6 +18,7 @@
   --footer-color: var(--background-color);
   --page-gutter: 2rem;
   --navlink-border: 3px;
+  --default-gap: 1.5rem;
 
   // LIGHT MODE COLORS
   --lightmode-foreground-hue: 50, 50, 50;
@@ -332,11 +336,14 @@ figure {
 }
 
 img {
-  border-radius: var(--image-border-radius);
   width: 100%;
   height: auto;
   object-fit: cover;
-  border: var(--image-border);
+
+  &:not(.fullwidth) {
+    border: var(--image-border);
+    border-radius: var(--image-border-radius);
+  }
 }
 
 caption {

@@ -24,7 +24,15 @@
     <Card active>
       <h3>Card 2</h3>
 
-      <p>Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus. Vestibulum semper, dolor a posuere venenatis, nunc augue volutpat ante, eu fringilla nunc libero a nibh. Curabitur sed euismod lorem, eget convallis odio. Nulla tincidunt fringilla ligula sed elementum. Proin ex odio, tempus vitae auctor vitae, sagittis ac dolor. Nullam luctus lorem sed dui iaculis, id elementum ipsum pulvinar. Etiam id lobortis libero. Praesent tempor pulvinar arcu eget tempor. Proin scelerisque feugiat orci, faucibus laoreet neque. Maecenas auctor ipsum eget auctor porta. Suspendisse venenatis metus commodo enim vestibulum interdum.</p>
+      <p>Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus. Vestibulum semper, dolor a posuere venenatis, nunc augue volutpat ante, eu fringilla nunc libero a nibh. Curabitur sed euismod lorem, eget convallis odio. Nulla tincidunt fringilla ligula sed elementum. Proin ex odio, tempus vitae auctor vitae, sagittis ac dolor. Nullam luctus lorem sed dui iaculis, id elementum ipsum pulvinar.</p>
+
+      <img
+        class="fullwidth inset"
+        alt="a kitten"
+        src="https://api.slick.af/images/zVrPJAPp.jpg"
+        width="1000"
+        height="500"
+        />
     </Card>
 
     <Card>
@@ -34,10 +42,10 @@
 
           <p>Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus.</p>
 
-          <p class="fullwidth">Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus.</p>
+          <p class="fullwidth padded">Ut tellus neque, blandit ac est in, tempor dictum lorem. Donec et pellentesque tellus.</p>
         </div>
 
-        <div class="card-footer fullwidth">
+        <div class="card-footer fullwidth padded">
           card footer
         </div>
       </Tiled>
@@ -65,6 +73,7 @@
   .card-footer {
     flex: 0;
     padding-top: var(--card-gutter);
+    padding-bottom: var(--card-gutter);
     border-top: 1px solid var(--foreground-10);
   }
 
@@ -76,5 +85,9 @@
     padding-bottom: 1rem;
     font-size: 0.9em;
     line-height: 1.3em;
+  }
+
+  img.inset {
+    height: 220px;
   }
 </style>
