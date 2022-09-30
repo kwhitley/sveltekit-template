@@ -31,7 +31,7 @@
     display: flex;
     font-size: 1.1rem;
     column-gap: 1.2em;
-    row-gap: 0.6em;
+    row-gap: 0.8em;
     align-items: center;
     justify-content: flex-end;
     flex-flow: column;
@@ -47,6 +47,7 @@
   :global(header nav a) {
     color: var(--foreground-color);
     text-decoration: none !important;
+    line-height: 0.9em;
 
     &:hover:not(.active) {
       opacity: 0.7;
