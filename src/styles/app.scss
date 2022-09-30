@@ -26,12 +26,13 @@
 
   // DARK MODE COLORS
   --darkmode-foreground-hue: 225, 225, 225;
-  --darkmode-background-hue: 0, 0, 0;
+  --darkmode-background-hue: 4, 4, 4;
 
   // MISC SETTINGS
   --ol-counter-size: 2rem;
   --image-border-radius: 0.3rem;
-  --image-border: 1px solid var(--foreground-50);
+  --image-outline-thickness: 4px;
+  --image-outline-color: var(--foreground-color);
 
   // IGNORE STUFF BELOW THIS LINE
   --foreground-hue: var(--lightmode-foreground-hue);
@@ -155,56 +156,11 @@ blockquote {
   }
 }
 
-textarea {
-  border-radius: 0;
-  border: none;
-  font-size: 1.1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  resize: none;
-  overflow: hidden;
-  padding: 0.6em;
-  text-transform: none;
-
-  &:hover {
-    background-color: var(--focus-color);
-  }
-
-  &:focus {
-    border: none;
-    outline: none;
-  }
-}
-
 hr {
   border: 0;
   height: 2px;
   border-bottom: 2px dashed var(--foreground-25);
   margin: 3rem 0 3rem;
-}
-
-button {
-  &:not(:disabled) {
-    cursor: pointer;
-  }
-}
-
-button.button {
-  // border-radius: var(--border-radius);
-  // padding: 1rem 2rem;
-  font-size: 2rem;
-  border: none;
-  // color: #fff;
-  transition: all 0.25s ease;
-  background-color: transparent;
-
-  &:disabled {
-    color: #aaa;
-  }
-
-  &:not(:disabled) {
-    cursor: pointer;
-  }
 }
 
 h1, h2, h3 {
@@ -223,14 +179,6 @@ h1 {
   line-height: 0.6em;
   letter-spacing: -0.06em;
   font-weight: 400;
-}
-
-h1.code {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: var(--go-color);
-  font-size: clamp(3rem, 25vmin, 7.5rem);
-  letter-spacing: 0.02em;
-  text-transform: none;
 }
 
 h2, h3 {
@@ -345,7 +293,8 @@ img {
   object-fit: cover;
 
   &:not(.fullwidth) {
-    border: var(--image-border);
+    outline: var(--image-outline-thickness) solid  var(--image-outline-color);
+    outline-offset: calc(-1 * var(--image-outline-thickness));
     border-radius: var(--image-border-radius);
   }
 }
