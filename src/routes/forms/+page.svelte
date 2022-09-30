@@ -9,7 +9,7 @@
   }
 
   let search = ''
-  let b = 3
+  let b = 4
 </script>
 
 <!-- MARKUP -->

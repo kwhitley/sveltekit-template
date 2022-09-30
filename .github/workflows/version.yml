@@ -21,7 +21,7 @@ jobs:
         uses: phips28/gh-action-bump-version@v9.0.31
         with:
           minor-wording:  'add,Adds,new,feature,feat,minor:'
-          major-wording:  'MAJOR,BREAKING'
+          major-wording:  'major:,MAJOR,BREAKING'
           tag-prefix: 'v'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
