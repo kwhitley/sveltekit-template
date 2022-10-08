@@ -6,6 +6,7 @@
 
   // DEFINES IF THE PAGE IS WIDTH-CONSTRAINED
   let constrained = true
+  let year = new Date().getFullYear()
 </script>
 
 <svelte:head>
@@ -18,7 +19,7 @@
 </svelte:head>
 
 <main>
-  <Nav version sticky collapsible>
+  <Nav version sticky collapsible horizontal>
     <span slot="brand">
       it<strike>t</strike>y.sh
     </span>
@@ -40,7 +41,7 @@
   </section>
 
   <Footer constrained={constrained}>
-    &copy; 2022, All rights reserved.
+    &copy; {year} Some Company. All rights reserved.
   </Footer>
 </main>
 

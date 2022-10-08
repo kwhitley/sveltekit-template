@@ -1,17 +1,14 @@
 <script>
   import { slide } from 'svelte/transition'
-  import { quintOut } from 'svelte/easing'
-  import MenuIcon from './MenuIcon.svelte'
   import { headerIsOpen } from '~/stores'
 
-  $: console.log('header open', $headerIsOpen)
-
   export let horizontal = true
+  export let open = false
 </script>
 
 
 <section>
-  {#if $headerIsOpen}
+  {#if open}
     <nav transition:slide={{ duration: 200 }} class:horizontal>
       <slot />
     </nav>

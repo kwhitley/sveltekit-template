@@ -12,7 +12,7 @@
 
   --link-color: var(--blue);
   --brand-color: var(--accent-color);
-  --brand-size: 3.2rem;
+  --brand-size: 2.2em;
   --version-offset: -0.3rem;
   --header-color: var(--background-color);
   --footer-color: var(--background-color);
@@ -78,6 +78,7 @@ html {
 body {
   height: 100%;
   color: var(--foreground-color);
+  font-size: 0.9rem;
 }
 
 ul, ol {
@@ -99,27 +100,6 @@ a {
   }
 }
 
-input.text, textarea {
-  background: none;
-  padding: 0.6em 0.6em;
-  font-size: 1.2rem;
-  border-radius: var(--border-radius);
-  border: none;
-  font-size: 2rem;
-  padding: 0.8rem 1rem;
-  border: 2px dashed #ddd;
-
-  &::placeholder {
-    color: #ccc;
-  }
-
-  &:focus {
-    outline: 2px dashed rgba(0,100,200, 0.6);
-    outline-offset: -2px;
-    border: 2px solid transparent;
-  }
-}
-
 blockquote {
   font-family: Georgia, 'Times New Roman', Times, serif;
   background: var(--foreground-5);
@@ -127,7 +107,7 @@ blockquote {
   margin: 1.5em 0 1.5em 0;
   padding: 1em 1em 0.6em;
   quotes: "\201C""\201D""\2018""\2019";
-  font-size: 1.4rem;
+  font-size: 1.4em;
   line-height: 1.4em;
   font-style: italic;
   letter-spacing: -0.01em;
@@ -160,19 +140,17 @@ hr {
   border: 0;
   height: 2px;
   border-bottom: 2px dashed var(--foreground-25);
-  margin: 3rem 0 3rem;
+  margin: 3em 0 3em;
 }
 
 h1, h2, h3 {
-  font-size: clamp(4rem, 25vmin, 7rem);
+  font-size: clamp(2.5em, 23vmin, 7em);
   font-weight: lighter;
-
-  text-shadow: 0 0 1px var(--background-color);
   line-height: 1em;
   letter-spacing: -0.02em;
   padding-top: 0.09em;
   padding-bottom: 0.26em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.3em;
 }
 
 h1 {
@@ -186,12 +164,12 @@ h2, h3 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   font-weight: 100;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.4em;
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
@@ -240,38 +218,50 @@ ol li {
   flex: 1;
   counter-increment: ol-counter;
   display: flex;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 ol li::before {
   content: counter(ol-counter);
   font-weight: bold;
   font-size: var(--ol-counter-size);
-  margin: -0.1em 0.7rem 0 0;
+  margin: -0.1em 0.7em 0 0;
   font-family: serif;
 }
 
 figure {
   display: flex;
   flex-flow: column;
-  gap: 1rem;
+  gap: 1em;
 
   caption {
     padding: 0 1.5em;
   }
 
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+    &:not(.fullwidth) {
+      outline: var(--image-outline-thickness) solid  var(--image-outline-color);
+      outline-offset: calc(-1 * var(--image-outline-thickness));
+      border-radius: var(--image-border-radius);
+    }
+  }
+
   &:not(:last-child) {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.5em;
   }
 
   &:not(:first-child) {
-    margin-top: 2rem;
+    margin-top: 2em;
   }
 
   &.horizontal {
     @media (min-width: 500px) {
       flex-flow: row;
-      gap: 2rem;
+      gap: 2em;
 
       & > * {
         flex: 1;
@@ -284,18 +274,6 @@ figure {
         padding: 0 1em 0 0;
       }
     }
-  }
-}
-
-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-
-  &:not(.fullwidth) {
-    outline: var(--image-outline-thickness) solid  var(--image-outline-color);
-    outline-offset: calc(-1 * var(--image-outline-thickness));
-    border-radius: var(--image-border-radius);
   }
 }
 

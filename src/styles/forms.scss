@@ -12,6 +12,7 @@
 }
 
 input, textarea, button {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   padding: 0.4rem 0.65rem;
   border-radius: calc(0.6 * var(--border-radius));
@@ -37,6 +38,11 @@ input[type=checkbox] {
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   cursor: pointer;
+}
+
+textarea {
+  width: auto;
+  resize: none;
 }
 
 label {

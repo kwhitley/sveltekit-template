@@ -3,6 +3,7 @@
   import Card from '~/components/Card.svelte'
   import Tiled from '~/components/Tiled.svelte'
   import SearchInput from '~/components/SearchInput.svelte'
+	import Editor from '~/components/Editor.svelte'
 
   const searchHandler = (e) => {
     console.log('searchHandler called with value', e.detail)
@@ -111,6 +112,23 @@
       </label> -->
     </Card>
   </Tiled>
+
+  <Card>
+    <h3>Card 3</h3>
+
+    <label>
+      Standard &lt;textarea /&gt;
+      <textarea
+        placeholder="<textarea />"
+        />
+    </label>
+
+    <Editor
+      label="<Editor />"
+      placeholder="<Editor />"
+      rows=10
+      />
+  </Card>
 </Page>
 
 <!-- STYLES -->

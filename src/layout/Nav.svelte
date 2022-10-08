@@ -9,23 +9,22 @@
   export let version = false
   export let collapsible = false
   export let horizontal = false
+
+  $: showMenu = $headerIsOpen || !collapsible
+  $: showIcon = collapsible && $$slots.default
 </script>
 
 <!-- MARKUP -->
 <header class:sticky>
   <section class:constrained>
-    <Brand showVersion={version}>
-      <slot name="brand">
-        SvelteKit Template
-      </slot>
-    </Brand>
+    <Brand showVersion={version} />
 
-    <div class="menu" class:open={$headerIsOpen}>
-      {#if collapsible}
+    <div class="menu" class:open={true}>
+      {#if showIcon}
         <MenuIcon bind:open={$headerIsOpen} />
       {/if}
 
-      <Menu horizontal={horizontal}>
+      <Menu horizontal={horizontal} open={showMenu}>
         <slot />
       </Menu>
     </div>
